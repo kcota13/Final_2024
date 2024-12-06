@@ -115,6 +115,18 @@ The numerical data shows the results in percentages. Within the placebo group 64
 
 ## Inferential Results
  
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+ 
+The Chi-Squared test shows a P-Value of 1.914e-08 and the fisher exact test shows that the P-Value is 1.246e-08 which is significantly lower than 0.05 which means we reject the null hypothesis. 
+
+## Conclusion
+
+In Conclusion, the bar chart shows that your are less likely to contract covid91 if you did receive the vaccine. The numerical data shows the results in percentages. Within the placebo group 64.93% of individuals got infected with the covid91. While in the vaccine group 35.07% contracted covid91.This indicates that receiving the vaccine as a female reduces the risk of contracted covid91. The inferential data shows a Chi-Square P-Value of 1.914e-08, this data also includes the Fisher exact test shows that the P-Value is 1.246e-08 which is significantly lower than 0.05 which means we reject the null hypothesis. In summation these examples and simulations show that as a female you are far less likely to contract covid91 is you receive the vaccine. 
+ 
 ## LGBTQ
 
 
