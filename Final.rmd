@@ -129,7 +129,54 @@ In Conclusion, the bar chart shows that your are less likely to contract covid91
  
 ## LGBTQ
 
+Q: Is the covid91 vaccine effective in members of the LGBTQ+ Community?
 
+$H_0$: The vaccine is not effective in preventing covid91 in the LGBTQ+ community
+
+$H_A$: The vaccine if effective in preventing covid91 in the LGBTQ+ community
+
+infected~LGBTQ(gay)
+cat~cat
+
+We'll be using the Cat~Cat helper file
+
+
+## Graphical Results
+
+```{r}
+LGBTQ <- FinalDat[FinalDat$LGBTQ=="gay",]
+```
+
+```{r}
+barchartGC(~infected + treatment,data=LGBTQ)
+barchartGC(~infected + treatment,data=LGBTQ, type="percent")
+
+```
+
+This Bar chart shows that members of the LGBTQ community are less likely to contract covid91 after reviewing the vaccine.
+
+## Numerical Results
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=LGBTQ)
+rowPerc(table1)
+colPerc(table1)
+```
+The numerical data shows the results in percentages. Within the placebo group 80% of individuals got infected with covid91. While in the vaccine group 20% contracted covid91. This indicates that receiving the vaccine as a LGBTQ community member significantly reduces the risk of contracted covid91. 
+
+##Inferential Results 
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+The Chi-Square test shows that the P-Value is 2.266e-06 and data the fisher exact test shows that the p-value is 7.269e-07 which is significantly lower than 0.05 which means we reject the null hypothesis.
+
+## Conclusion
+
+The bar chart shows that you are less likely to contract covid91 if you did receive the vaccine. The numerical data shows the results in percentages. Within the placebo group 80.00% of individuals got infected with covid91. While in the vaccine group 20.00% contracted covid91. This indicates that receiving the vaccine as a LGBTQ member significantly reduces the risk of contracted covid91. The inferential data shows chi-squared p-value of 2.266-06, this data also includes the fisher exact test that shows that the p-value is 7.269e-07 which is significantly lower than 0.05 which means we reject the null hypothesis. In summation these examples and simulations show that as a member of the LGBTQ community you are far less likely to contact covid91 if you receive the vaccine.
 
 ## Druggies
 
